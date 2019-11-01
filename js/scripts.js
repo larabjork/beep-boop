@@ -7,30 +7,15 @@ var robotCounter = function(num) {
     return "DANGER! DANGER! Cannot compute! Enter a number greater than 0!";
 
   } else {
-
     for (var i = 0; i <=num; i+= 1) {
       if(i < num) {
-        robotArray.push(num);
-        return robotArray;
-        console.log(robotArray)
-      };
+        $(".result").append(i + ", ")
+      } else {
+        $(".result").append(i)
+      }
     };
-
-// This was within the else statement and it worked to return the list of numbers without a comma at the end; before trying to substitute beep-boop etc. values.
-//   for (var i = 0; i <=num; i+= 1) {
-//     if(i < num) {
-//       $(".result").append(i + ", ")
-//     } else {
-//       $(".result").append(i)
-//     }
-//
-//
-// }
-
-
-    // return robotArray.join(' ');
-    // return romanArray
   };
+return robotArray.join(' ');
 };
 
 
@@ -49,7 +34,6 @@ $(document).ready(function() {
    $("div.refresh").show();
 
    var num = parseInt($("input#entry").val());
-   // THIS LINE WILL NEED TO BE ADJUSTED TO FIT
    var result = robotCounter(num);
 
        $(".outcome").text(result);
