@@ -21,18 +21,16 @@ _These exceptions are written from least to most important. The first exception 
 
 _A user should be able to enter a new number and see new results over and over again._
 
-The following specifications were used:
+I identified the following specifications, but as of the assignment's initial due date, only the first three were achieved:
 * Spec: The program alerts the user if they enter a negative number.
     * Input: "-111"
     * Output: Prompt to enter a number greater than 0, exact wording TBD.
 * Spec: The program returns a range of numbers from 0 to the user's inputted number
     * Input: "4"
     * Output: "0, 1, 2, 3, 4"
-* Spec: If the user enters a number less than 13, the program replaces 3 with "I'm sorry, Dave. I'm afraid I can't do that." in the correct position within the range of numbers.
-    * Input: "4"
-    * Output: "0, 1, 2, I'm sorry, Dave. I'm afraid I can't do that., 4"
-    * Input: "12"
-    * Output: "0, 1, 2, I'm sorry, Dave. I'm afraid I can't do that., 4, 5, 6, 7, 8, 9, 10, 11, 12"
+* Spec: The program returns a range of numbers from 0 to the user's inputted number, substituting specified language for 1, 2, and 3.
+    * Input: "54"
+    * Output: "0, Beep!, Boop!, I'm sorry, Dave. I'm afraid I can't do that, 4, 5, ..."  
 * Spec: If the digit 3 appears anywhere in a number that is part of the returned range, the program replaces all digits with "I'm sorry, Dave. I'm afraid I can't do that." in the correct position within the range of numbers.
     * Input: "4"
     * Output: "0, 1, 2, I'm sorry, Dave. I'm afraid I can't do that., 4"
@@ -57,15 +55,14 @@ Project was written using Google Chrome; no other browsers were tested for compa
 There shouldn't be any special setup required. If something doesn't display correctly or goes wrong somehow, please contact me at  <lara.m.bjork@gmail.com> and I will do my best to troubleshoot for you.
 
 ### Known Issues
-* KEEP THIS IF IT APPLIES: Although there is responsive sizing in place, this project is best viewed on standard desktop. It was not tested on a large desktop, table, or phone.
+* This program does not yet have functionality that meets all objectives. Most importantly, it cannot find and replace any numbers other than the integers 1, 2, and 3. Additional code must be developed and checked against all project requirements.
 
 
-
-### Where to Find This Project
-USE THIS SECTION ONLY IF GH PAGE CREATED
+### Where to Find This project
+GitHub repository: https://github.com/larabjork/beep-boop.git
 
 
 ### License
 This software is licensed under the MIT license.
 
-_Copyright (c) 2019 ** PARTNER NAME and Lara Bjork **_
+_Copyright (c) 2019 **  Lara Bjork **_

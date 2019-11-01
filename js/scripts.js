@@ -1,14 +1,11 @@
 var robotWords = ["I'm sorry, Dave. I'm afraid I can't do that", "Boop!", "Beep!"];
-var threes = [3,13,23,30,33,43,53,63,73,83,93]
-var twos = [2,12,20,22,42,52,62,72,82,92]
-var ones = [1,10,11,14,15,16,17,18,19,41,51,61,71,81,91]
 var robotArray = []
 
 
 // business logic
 var robotCounter = function(num) {
   if ((num < 1) || (num > 100)){
-    return "DANGER! DANGER! Does not compute! You must enter a number greater than 0 and less than 101!";
+    return "DANGER! DANGER! Does not compute! You must enter a number greater than 0!";
 
   } else {
     for (var i = 0; i <=num; i+= 1) {
@@ -26,21 +23,9 @@ var robotCounter = function(num) {
         };
       };
     }
-
     return robotArray;
 
   };
-
-
-
-
-
-
-
-
-
-
-
 
 // user logic
 
@@ -96,7 +81,3 @@ $(document).ready(function() {
 //   };
 //   return robotArray;
 // };
-
-
-// THIS IS THE UNSUCCESSFUL MODULO ATTEMPT
-//
