@@ -3,9 +3,24 @@ var robotArray = []
 // business logic
 
 var robotCounter = function(num) {
-  if (num < 1) {
-    return "DANGER! DANGER! Cannot compute! Enter a number greater than 0!";
-  }
+  // if (num < 1) {
+  //   return "DANGER! DANGER! Cannot compute! Enter a number greater than 0!";
+
+  // } else {
+
+
+
+  // }
+
+
+  for (var i = 0; i <=num; i+= 1) {
+    if(i < num) {
+        $(".result").append(i + ", ")
+    } else {
+        $(".result").append(i)
+    }
+
+
 
   // while (num >= 1000){
   //   num = num - 1000;
@@ -24,6 +39,7 @@ var robotCounter = function(num) {
 
     // return robotArray.join(' ');
     // return romanArray
+  };
 };
 
 
