@@ -13,9 +13,10 @@ var robotCounter = function(num) {
       } else {
         $(".result").append(i)
       }
+      // return num;
     };
-    return i;
   };
+};
 
 
 
@@ -39,4 +40,3 @@ $(document).ready(function() {
    $(".outcome").text(result);
  });
 });
-};
