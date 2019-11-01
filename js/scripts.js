@@ -3,22 +3,22 @@ var robotArray = []
 // business logic
 
 var robotCounter = function(num) {
-  // if (num < 1) {
-  //   return "DANGER! DANGER! Cannot compute! Enter a number greater than 0!";
+  if (num < 1) {
+    return "DANGER! DANGER! Cannot compute! Enter a number greater than 0!";
 
-  // } else {
+  } else {
 
-
-
-  // }
-
-
-  for (var i = 0; i <=num; i+= 1) {
-    if(i < num) {
+    for (var i = 0; i <=num; i+= 1) {
+      if(i < num) {
         $(".result").append(i + ", ")
-    } else {
+      } else {
         $(".result").append(i)
-    }
+      }
+
+
+  }
+
+
 
 
 
