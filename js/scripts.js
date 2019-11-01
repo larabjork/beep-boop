@@ -8,24 +8,33 @@ var robotArray = []
 
 
 var robotCounter = function(num) {
-  if (num < 1) || (num >= 100){
-    return "DANGER! DANGER! Does not compute! You must enter a number greater than 0 and less than 100!";
+  if ((num < 1) || (num > 100)){
+    return "DANGER! DANGER! Does not compute! You must enter a number greater than 0 and less than 101!";
+
   } else {
     for (var i = 0; i <=num; i+= 1) {
-      if (i===3) {
-        robotArray.push(robotWords[0])
-      } else if (i===2){
-        robotArray.push(robotWords[1])
-      } else if (i===1){
-        robotArray.push(robotWords[2])
+      // if (num % 10 >= 4) {
+      //   robotArray.push(i)
+      //
+      // }  else
+      if (i % 10 === 3 ) {
+        robotArray.push(robotWords[0]);
+
+      } else if (i % 10 === 2 ) {
+        robotArray.push(robotWords[1]);
+
+      } else if (i % 10 === 1 ) {
+        robotArray.push(robotWords[2]);
+
       } else {
         robotArray.push(i)
       };
     };
-  };
-  return robotArray;
-};
+  }
 
+    return robotArray;
+
+};
 
 
 
@@ -51,6 +60,8 @@ $(document).ready(function() {
  });
 });
 
+
+// GRAVEYARD / CLIPBOARD
 // THIS CODE WORKS TO REPLACE SINGLE DIGIT OF 3 WITH THE TEXT.
 // var robotCounter = function(num) {
 //   if (num < 1) {
@@ -82,8 +93,8 @@ $(document).ready(function() {
 //         robotArray.push(robotWords[2])
 //       } else {
 //         robotArray.push(i)
-//       };
-//     };
+// //       };
+// //     };
 //   };
 //   return robotArray;
 // };
