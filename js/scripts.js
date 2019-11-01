@@ -1,12 +1,15 @@
 var robotWords = ["I'm sorry, Dave. I'm afraid I can't do that", "Boop!", "Beep!"];
+var threes = [3,13,23,33,43,53,63,73,83,93]
+var twos = [2,12,22,42,52,62,72,82,92]
+var ones = [1,11,14,15,16,17,18,19,41,51,61,71,81,91]
 var robotArray = []
 // business logic
 
 
 
 var robotCounter = function(num) {
-  if (num < 1) {
-    return "DANGER! DANGER! Does not compute! You must enter a number greater than 0!";
+  if (num < 1) || (num >= 100){
+    return "DANGER! DANGER! Does not compute! You must enter a number greater than 0 and less than 100!";
   } else {
     for (var i = 0; i <=num; i+= 1) {
       if (i===3) {
@@ -60,6 +63,26 @@ $(document).ready(function() {
 //         robotArray.push(robotWords[0])
 //       };
 //       console.log(robotArray)
+//     };
+//   };
+//   return robotArray;
+// };
+
+// THIS CODE WORDS TO REPLACE SINGLE DIGITS 1, 2, or 3 in the TEXT
+// var robotCounter = function(num) {
+//   if (num < 1) {
+//     return "DANGER! DANGER! Does not compute! You must enter a number greater than 0!";
+//   } else {
+//     for (var i = 0; i <=num; i+= 1) {
+//       if (i===3) {
+//         robotArray.push(robotWords[0])
+//       } else if (i===2){
+//         robotArray.push(robotWords[1])
+//       } else if (i===1){
+//         robotArray.push(robotWords[2])
+//       } else {
+//         robotArray.push(i)
+//       };
 //     };
 //   };
 //   return robotArray;
