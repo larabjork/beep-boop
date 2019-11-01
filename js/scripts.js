@@ -8,15 +8,15 @@ var robotCounter = function(num) {
 
   } else {
     for (var i = 0; i <=num; i+= 1) {
-      if(i < num) {
+      if (i < num) {
         $(".result").append(i + ", ")
       } else {
         $(".result").append(i)
       }
     };
+    return i;
   };
-return robotArray.join(' ');
-};
+
 
 
 
@@ -36,6 +36,7 @@ $(document).ready(function() {
    var num = parseInt($("input#entry").val());
    var result = robotCounter(num);
 
-       $(".outcome").text(result);
+   $(".outcome").text(result);
  });
 });
+};
