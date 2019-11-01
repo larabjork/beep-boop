@@ -28,6 +28,11 @@ The following specifications were used:
 * Spec: The program returns a range of numbers from 0 to the user's inputted number
     * Input: "4"
     * Output: "0, 1, 2, 3, 4"
+* Spec: If the user enters a number less than 13, the program replaces 3 with "I'm sorry, Dave. I'm afraid I can't do that." in the correct position within the range of numbers.
+    * Input: "4"
+    * Output: "0, 1, 2, I'm sorry, Dave. I'm afraid I can't do that., 4"
+    * Input: "12"
+    * Output: "0, 1, 2, I'm sorry, Dave. I'm afraid I can't do that., 4, 5, 6, 7, 8, 9, 10, 11, 12"
 * Spec: If the digit 3 appears anywhere in a number that is part of the returned range, the program replaces all digits with "I'm sorry, Dave. I'm afraid I can't do that." in the correct position within the range of numbers.
     * Input: "4"
     * Output: "0, 1, 2, I'm sorry, Dave. I'm afraid I can't do that., 4"

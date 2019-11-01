@@ -4,21 +4,26 @@ var robotArray = []
 
 var robotCounter = function(num) {
   if (num < 1) {
-    return "DANGER! DANGER! Cannot compute! Enter a number greater than 0!";
+    return "DANGER! DANGER! Does not compute! You must enter a number greater than 0!";
 
   } else {
     for (var i = 0; i <=num; i+= 1) {
-      if (i < num) {
-        $(".result").append(i + ", ")
-      } else {
-        $(".result").append(i)
-      }
-      // return num;
+      if (i <= num) {
+        robotArray.push(i);
+        console.log(robotArray)
+      };
     };
   };
 };
 
-
+// Original version of second spec - with user logic mixed in?
+// } else {
+//   for (var i = 0; i <=num; i+= 1) {
+//     if (i < num) {
+//       $(".result").append(i + ", ")
+//     } else {
+//       $(".result").append(i)
+//     }
 
 
 
