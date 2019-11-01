@@ -1,40 +1,39 @@
 var robotWords = ["I'm sorry, Dave. I'm afraid I can't do that", "Boop!", "Beep!"];
-var threes = [3,13,23,33,43,53,63,73,83,93]
-var twos = [2,12,22,42,52,62,72,82,92]
-var ones = [1,11,14,15,16,17,18,19,41,51,61,71,81,91]
+var threes = [3,13,23,30,33,43,53,63,73,83,93]
+var twos = [2,12,20,22,42,52,62,72,82,92]
+var ones = [1,10,11,14,15,16,17,18,19,41,51,61,71,81,91]
 var robotArray = []
+
+
 // business logic
-
-
-
 var robotCounter = function(num) {
   if ((num < 1) || (num > 100)){
     return "DANGER! DANGER! Does not compute! You must enter a number greater than 0 and less than 101!";
 
   } else {
     for (var i = 0; i <=num; i+= 1) {
-      // if (num % 10 >= 4) {
-      //   robotArray.push(i)
-      //
-      // }  else
-      if (i % 10 === 3 ) {
-        robotArray.push(robotWords[0]);
+        if (i === 3 ) {
+          robotArray.push(robotWords[0]);
 
-      } else if (i % 10 === 2 ) {
-        robotArray.push(robotWords[1]);
+        } else if (i === 2 ) {
+          robotArray.push(robotWords[1]);
 
-      } else if (i % 10 === 1 ) {
-        robotArray.push(robotWords[2]);
+        } else if (i === 1 ) {
+          robotArray.push(robotWords[2]);
 
-      } else {
-        robotArray.push(i)
+        } else {
+          robotArray.push(i)
+        };
       };
-    };
-  }
+    }
 
     return robotArray;
 
-};
+  };
+
+
+
+
 
 
 
@@ -46,12 +45,11 @@ var robotCounter = function(num) {
 // user logic
 
 $(document).ready(function() {
- $("form#user").submit(function(event) {
+ $(".clickable").click(function(event) {
    event.preventDefault();
 
-   $("div.result").show();
-   // THE SECOND BUTTON DOESN'T WORK YET
-   $("div.refresh").show();
+   $("div#before").toggle();
+   $("div.result").toggle();
 
    var num = parseInt($("input#entry").val());
    var result = robotCounter(num);
@@ -98,3 +96,7 @@ $(document).ready(function() {
 //   };
 //   return robotArray;
 // };
+
+
+// THIS IS THE UNSUCCESSFUL MODULO ATTEMPT
+//

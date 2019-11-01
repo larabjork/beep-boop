@@ -10,23 +10,22 @@
   </head>
   <body>
     <div class="container">
-      <h2>The Robots Are In Charge...</h2>
-      <p>Do you think that as long as humans are the ones building the robots, we'll be okay? This simple webpage might change your mind.</p>
-      <form id="user">
-        <div class="form-group">
-          <label for="entry">Robot, count from 0 to whenever I tell you to stop. Don't worry, I won't enter anything higher than 100:</label>
-          <!-- Line 17 is there as a placeholder; for right now, my loops only work with numbers less than 100 -->
-          <input required= "true" id="entry" class= "form-control">
-        </div>
-        <button type="submit" name="button">Let's see what happens</button>
-      </form>
+      <div id="before">
+        <h2>The Robots Are In Charge...</h2>
+        <p>Do you think that as long as humans are the ones building the robots, we'll be okay? This simple webpage might change your mind.</p>
+        <form id="user">
+          <div class="form-group">
+            <label for="entry">Robot, count from 0 to whenever I tell you to stop.</label>
+            <input required= "true" id="entry" class= "form-control">
+          </div>
+             <p class="fakeButton"><span class="clickable">Let's see what happens</span></p>
+        </form>
+      </div>
+
       <div class="result">
         <p><b>The robot says:</b> <span class="outcome"></span></p>
-      </div>
         <br>
-      <div class="refresh">
-        <button type="submit" name="button">Try again!</button>
-
+        <p class="fakeButton"> <span class="clickable">Try again!</span></p>
       </div>
 
 

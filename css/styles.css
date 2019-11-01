@@ -2,6 +2,15 @@
   display: none;
 }
 
-.refresh {
-  display: none;
+.clickable {
+  color: black;
+  cursor: pointer;
+}
+
+.fakeButton {
+  padding: 4px;
+  color: white;
+  background-color: #ffcccc;
+  border: 2.5px solid #990000;
+  border-radius: 5px;
 }
