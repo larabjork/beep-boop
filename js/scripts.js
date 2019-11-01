@@ -10,31 +10,22 @@ var robotCounter = function(num) {
 
     for (var i = 0; i <=num; i+= 1) {
       if(i < num) {
-        $(".result").append(i + ", ")
-      } else {
-        $(".result").append(i)
-      }
+        robotArray.push(num);
+        return robotArray;
+        console.log(robotArray)
+      };
+    };
 
-
-  }
-
-
-
-
-
-  // while (num >= 1000){
-  //   num = num - 1000;
-  //   robotArray.push(robotWords[0]);
-  //   if (num < 1000)
-  //   break
-  //   };
-  //
-  // while (num >= 900){
-  //   num = num - 900;
-  //   romanArray.push(romanSymbols[1]);
-  //   if (num < 900)
-  //   break
-  //   };
+// This was within the else statement and it worked to return the list of numbers without a comma at the end; before trying to substitute beep-boop etc. values.
+//   for (var i = 0; i <=num; i+= 1) {
+//     if(i < num) {
+//       $(".result").append(i + ", ")
+//     } else {
+//       $(".result").append(i)
+//     }
+//
+//
+// }
 
 
     // return robotArray.join(' ');
@@ -54,6 +45,8 @@ $(document).ready(function() {
    event.preventDefault();
 
    $("div.result").show();
+   // THE SECOND BUTTON DOESN'T WORK YET
+   $("div.refresh").show();
 
    var num = parseInt($("input#entry").val());
    // THIS LINE WILL NEED TO BE ADJUSTED TO FIT

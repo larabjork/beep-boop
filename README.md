@@ -24,7 +24,7 @@ _A user should be able to enter a new number and see new results over and over a
 The following specifications were used:
 * Spec: The program alerts the user if they enter a negative number.
     * Input: "-111"
-    * Output: "Please enter a number greater than 0"
+    * Output: Prompt to enter a number greater than 0, exact wording TBD.
 * Spec: The program returns a range of numbers from 0 to the user's inputted number
     * Input: "4"
     * Output: "0, 1, 2, 3, 4"
