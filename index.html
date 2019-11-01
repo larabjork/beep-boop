@@ -12,10 +12,17 @@
     <div class="container">
       <h2>The Robots Are In Charge...</h2>
       <p>You might think that as long as humans are the ones building the robots, we'll be okay. This simple webpage might change your mind.</p>
-      <form>
-        
-
+      <form id="user">
+        <div class="form-group">
+          <label for="entry">Robot, count from 0 to whenever I tell you to stop:</label>
+          <input required= "true" id="entry" class= "form-control">
+        </div>
+        <button type="submit" name="button">Let'suser see what happens</button>
       </form>
+      <div class="result">
+        <p>The robot says: <span class="outcome"></span></p>
+      </div>
+
 
     </div>
   </body>
