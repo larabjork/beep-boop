@@ -6,7 +6,7 @@ var robotArray = [];
 // business logic
 
 var robotCounter = function robotizer(num) {
-  if (num.match(/a/)){
+  if (num.match(/\d/)){
     return robotThree(number)};
   };
   // } else if (num.match(/\d*2\d*/g)) {
