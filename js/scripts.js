@@ -2,31 +2,32 @@ var robotWords = ["I'm sorry, Dave. I'm afraid I can't do that", "Boop!", "Beep!
 var robotArray = []
 
 
-// business logic
-var robotCounter = function(num) {
-  if ((num < 1) || (num > 100)){
-    return "DANGER! DANGER! Does not compute! You must enter a number greater than 0!";
 
+// business logic
+
+
+
+// var reg3 = /\d*3\d*/g;
+// var reg2 = /\d*2\d*/g;
+// var reg1 = /\d*1\d*/g;
+// var robotCounter = reg3.replace(humanCounter);
+
+
+var humanCounter = function(num) {
+  if (num < 1) {
+    return "DANGER! DANGER! Does not compute! You must enter a number greater than 0!";
   } else {
     for (var i = 0; i <=num; i+= 1) {
-        if (i === 3 ) {
-          robotArray.push(robotWords[0]);
-
-        } else if (i === 2 ) {
-          robotArray.push(robotWords[1]);
-
-        } else if (i === 1 ) {
-          robotArray.push(robotWords[2]);
-
-        } else {
-          robotArray.push(i)
-        };
-      };
-    }
+      if (i>=1) {
+        robotArray.push(i)
+      }
+    };
     return robotArray;
+    };
+};
 
-  };
 
+var outputArray = robotArray
 // user logic
 
 $(document).ready(function() {
@@ -37,7 +38,7 @@ $(document).ready(function() {
    $("div.result").toggle();
 
    var num = parseInt($("input#entry").val());
-   var result = robotCounter(num);
+   var result = humanCounter(num);
 
    $(".outcome").text(result);
  });
@@ -62,22 +63,4 @@ $(document).ready(function() {
 //   return robotArray;
 // };
 
-// THIS CODE WORDS TO REPLACE SINGLE DIGITS 1, 2, or 3 in the TEXT
-// var robotCounter = function(num) {
-//   if (num < 1) {
-//     return "DANGER! DANGER! Does not compute! You must enter a number greater than 0!";
-//   } else {
-//     for (var i = 0; i <=num; i+= 1) {
-//       if (i===3) {
-//         robotArray.push(robotWords[0])
-//       } else if (i===2){
-//         robotArray.push(robotWords[1])
-//       } else if (i===1){
-//         robotArray.push(robotWords[2])
-//       } else {
-//         robotArray.push(i)
-// //       };
-// //     };
-//   };
-//   return robotArray;
-// };
+// THIS CODE WORDS TO REPLACE SINGLE DIGITS 1, 2, or 3 in the TEXT==where I left off on Friday
