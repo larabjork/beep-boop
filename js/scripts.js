@@ -1,56 +1,68 @@
 var robotWords = ["I'm sorry, Dave. I'm afraid I can't do that", "Boop!", "Beep!"];
 var robotArray = [];
+var humanArray = [];
 
-// function mrRoboto(num) {
-//   var botCount = robotCounter(num)
-//   robotCounter.forEach (function (num){
-//     var banana = robotCounter(num);
-//     robotArray.push(banana);
-//   });
-//   return robotArray;
-// };
+function mrRoboto(num) {
+  var robotCount = arrayRobots(num)
+  robotCount.forEach (function(num){
+    var banana = robotCounter(num);
+    robotArray.push(banana);
+  });
+  return robotArray;
+};
 
-var humanCounter = function(number) {
-  if (number < 1) {
-      return "DANGER! DANGER! Does not compute! You must enter a number greater than 0!";
-    } else {
-      for (var i = 0; i <=number; i+= 1) {
-        robotArray.push(i)
-      };
-    };
-  return robotArray;  
+
+//This is where I take the array of numbers and make each value an element in a string, so that the regex in robotCounter will work
+function arrayRobots(strArray) {
+  var robotishArray = strArray.toString().split(",");
+  return robotishArray
 }
 
 
 
+//This is where I make an array with numerical values, counting up from 0 to the user's entry.
+var humanCounter = function(number) {
+  if (number < 1) {
+      return "DANGER! DANGER! DOES NOT COMPUTE! You must enter a number greater than 0!";
+    } else {
+      for (var i = 0; i <=number; i+= 1) {
+        humanArray.push(i)
+      };
+    };
+  return humanArray;
 
-// business logic
 
-// var robotCounter = function robotizer(num) {
-//   if (num.match(/\d*3\d*/g)){
-//     return robotThree(num)
-//   } else if (num.match(/\d*2\d*/g)) {
-//       return robotTwo(num)
-//   } else if (num.match(/\d*1\d*/g)) {
-//       return robotOne(num)
-//   } else {
-//       return num};
-//   };
-//
-//
-//
-//
-// function robotThree(num) {
-//   return "I'm sorry, Dave. I'm afraid I can't do that"
-// };
-//
-// function robotTwo(num) {
-//   return "Boop!"
-// };
-//
-// function robotOne(num) {
-//   return "beep!"
-// };
+}
+
+
+
+// this is where I tell the program to look for special numbers and return approrpiate values (see functions below)
+
+var robotCounter = function robotizer(num) {
+  if (num.match(/\d*3\d*/g)){
+    return robotThree(num)
+  } else if (num.match(/\d*2\d*/g)) {
+      return robotTwo(num)
+  } else if (num.match(/\d*1\d*/g)) {
+      return robotOne(num)
+  } else {
+      return num};
+  };
+
+
+
+
+function robotThree(num) {
+  return "I'm sorry, Dave. I'm afraid I can't do that"
+};
+
+function robotTwo(num) {
+  return "Boop!"
+};
+
+function robotOne(num) {
+  return "beep!"
+};
 
 
 
@@ -66,7 +78,7 @@ $(document).ready(function() {
 
    var num = $("input#entry").val();
    var number = parseInt($("input#entry").val());
-   var result = humanCounter(num);
+   var result = mrRoboto(num);
 
    $(".outcome").text(result);
  });
