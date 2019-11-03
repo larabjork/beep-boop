@@ -2,21 +2,21 @@ var robotWords = ["I'm sorry, Dave. I'm afraid I can't do that", "Boop!", "Beep!
 var robotArray = [];
 var humanArray = [];
 
-function mrRoboto(num) {
-  var robotCount = arrayRobots(num)
-  robotCount.forEach (function(num){
-    var banana = robotCounter(num);
-    robotArray.push(banana);
-  });
-  return robotArray;
-};
-
-
-//This is where I take the array of numbers and make each value an element in a string, so that the regex in robotCounter will work
-function arrayRobots(strArray) {
-  var robotishArray = strArray.toString().split(",");
-  return robotishArray
-}
+// function mrRoboto(num) {
+//   var robotCount = arrayRobots(num)
+//   robotCount.forEach (function(num){
+//     var banana = robotCounter(num);
+//     robotArray.push(banana);
+//   });
+//   return robotArray;
+// };
+//
+//
+// //This is where I take the array of numbers and make each value an element in a string, so that the regex in robotCounter will work
+// function arrayRobots(strArray) {
+//   var robotishArray = strArray.toString().split(",");
+//   return robotishArray
+// }
 
 
 
@@ -42,7 +42,7 @@ var robotCounter = function robotizer(num) {
   if (num.match(/\d*3\d*/g)){
     return robotThree(num)
   } else if (num.match(/\d*2\d*/g)) {
-      return robotTwo(num)
+      return robotTwo(num).toString()
   } else if (num.match(/\d*1\d*/g)) {
       return robotOne(num)
   } else {
@@ -78,7 +78,7 @@ $(document).ready(function() {
 
    var num = $("input#entry").val();
    var number = parseInt($("input#entry").val());
-   var result = mrRoboto(num);
+   var result = humanCounter(number);
 
    $(".outcome").text(result);
  });
