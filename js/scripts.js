@@ -2,47 +2,37 @@ var robotWords = ["I'm sorry, Dave. I'm afraid I can't do that", "Boop!", "Beep!
 var robotArray = [];
 var humanArray = [];
 
-// function mrRoboto(num) {
-//   var robotCount = arrayRobots(num)
-//   robotCount.forEach (function(num){
-//     var banana = robotCounter(num);
-//     robotArray.push(banana);
-//   });
-//   return robotArray;
-// };
+// function mrRoboto(numbers) {
+//   var robotish= humanCounter.toString().split(",");
+//   robotCounter.forEach(function(num);
+//     var test = robotCounter(num);
 //
-//
-// //This is where I take the array of numbers and make each value an element in a string, so that the regex in robotCounter will work
-// function arrayRobots(strArray) {
-//   var robotishArray = strArray.toString().split(",");
-//   return robotishArray
+// function numToString(number) {
+//   var arr
 // }
 
-
-
-//This is where I make an array with numerical values, counting up from 0 to the user's entry.
+//this is where I tell the program to start counting at 0, adding 1 each time, pushing to an array of NUMBERS, stopping at the number that the user entered
 var humanCounter = function(number) {
   if (number < 1) {
       return "DANGER! DANGER! DOES NOT COMPUTE! You must enter a number greater than 0!";
     } else {
       for (var i = 0; i <=number; i+= 1) {
         humanArray.push(i)
+        var numToString = humanArray.toString().split(",");
       };
     };
-  return humanArray;
-
-
+  return numToString;
 }
 
 
 
-// this is where I tell the program to look for special numbers and return approrpiate values (see functions below)
+// this is where I tell the program to look for special cases and return appropriate values--this needs to examine STRINGS (see functions below).
 
 var robotCounter = function robotizer(num) {
   if (num.match(/\d*3\d*/g)){
     return robotThree(num)
   } else if (num.match(/\d*2\d*/g)) {
-      return robotTwo(num).toString()
+    return robotTwo(num)
   } else if (num.match(/\d*1\d*/g)) {
       return robotOne(num)
   } else {
