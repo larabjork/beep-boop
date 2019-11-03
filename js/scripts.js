@@ -1,21 +1,27 @@
 var robotWords = ["I'm sorry, Dave. I'm afraid I can't do that", "Boop!", "Beep!"];
 var robotArray = [];
 
+// function robotCounter(num) {
+//   var analyzer = robotAnalyzer(num)
+//   robotAnalyzer.forEach (function (num){
+//     var banana = robotAnalyzer(num);
+//     robotArray.push(banana);
+//   });
+// };
 
 
 // business logic
 
 var robotCounter = function robotizer(num) {
-  if (num.match(/\d/)){
-    return robotThree(number)};
+  if (num.match(/\d*3\d*/g)){
+    return robotThree(num)
+  } else if (num.match(/\d*2\d*/g)) {
+      return robotTwo(num)
+  } else if (num.match(/\d*1|d*/g)) {
+      return robotOne(num)
+  } else {
+      return num};
   };
-  // } else if (num.match(/\d*2\d*/g)) {
-  //   return robotTwo(num)
-  // } else if (num.match(/\d*1|d*/g)) {
-  //   return robotone(num)
-  // } else {
-  //   return num};
-
 
 
 
@@ -44,7 +50,7 @@ $(document).ready(function() {
    // $("div#before").toggle();
    // $("div.result").toggle();
 
-   var num = parseInt($("input#entry").val());
+   var num = $("input#entry").val();
    var result = robotCounter(num);
 
    $(".outcome").text(result);
