@@ -2,25 +2,26 @@ var robotWords = ["I'm sorry, Dave. I'm afraid I can't do that", "Boop!", "Beep!
 var robotArray = [];
 var humanArray = [];
 
-// function mrRoboto(numbers) {
-//   var robotish= humanCounter.toString().split(",");
-//   robotCounter.forEach(function(num);
-//     var test = robotCounter(num);
-//
-// function numToString(number) {
-//   var arr
-// }
+function mrRoboto(number) {
+  if (number < 1) {
+    return "DANGER! DANGER! DOES NOT COMPUTE! You must enter a number greater than 0!";
+  } else {
+    var roboSubstitution = humanCounter(number);
+    roboSubstitution.forEach(function(num) {
+      var bot = robotCounter(num);
+      robotArray.push(bot);
+    });
+  return robotArray;
+  };
+};
+
 
 //this is where I tell the program to start counting at 0, adding 1 each time, pushing to an array of NUMBERS, stopping at the number that the user entered
 var humanCounter = function(number) {
-  if (number < 1) {
-      return "DANGER! DANGER! DOES NOT COMPUTE! You must enter a number greater than 0!";
-    } else {
       for (var i = 0; i <=number; i+= 1) {
         humanArray.push(i)
         var numToString = humanArray.toString().split(",");
       };
-    };
   return numToString;
 }
 
@@ -66,9 +67,9 @@ $(document).ready(function() {
    // $("div#before").toggle();
    // $("div.result").toggle();
 
-   var num = $("input#entry").val();
+   // var num = $("input#entry").val();
    var number = parseInt($("input#entry").val());
-   var result = humanCounter(number);
+   var result = mrRoboto(number);
 
    $(".outcome").text(result);
  });
