@@ -3,7 +3,7 @@ var robotArray = [];
 var humanArray = [];
 
 function mrRoboto(number) {
-  if (number < 1) {
+  if (number < 1 ) {
     return "DANGER! DANGER! DOES NOT COMPUTE! You must enter a number greater than 0!";
   } else {
     var roboSubstitution = humanCounter(number);
@@ -61,13 +61,13 @@ function robotOne(num) {
 // user logic
 
 $(document).ready(function() {
- $("form#user").submit(function(event) {
+ $(".clickable").click(function(event) {
    event.preventDefault();
 
-   // $("div#before").toggle();
-   // $("div.result").toggle();
+   $("div#before").toggle();
+   $("div.result").toggle();
 
-   // var num = $("input#entry").val();
+
    var number = parseInt($("input#entry").val());
    var result = mrRoboto(number);
 

@@ -21,7 +21,7 @@ _These exceptions are written from least to most important. The first exception 
 
 _A user should be able to enter a new number and see new results over and over again._
 
-I identified the following specifications, but as of the assignment's initial due date, only the first three were achieved:
+I identified the following specifications (the second one came from the assignment instructions)
 * Spec: The program alerts the user if they enter a negative number.
     * Input: "-111"
     * Output: Prompt to enter a number greater than 0, exact wording TBD.
@@ -55,7 +55,9 @@ Project was written using Google Chrome; no other browsers were tested for compa
 There shouldn't be any special setup required. If something doesn't display correctly or goes wrong somehow, please contact me at  <lara.m.bjork@gmail.com> and I will do my best to troubleshoot for you.
 
 ### Known Issues
-* This program does not yet have functionality that meets all objectives. Most importantly, it cannot find and replace any numbers other than the integers 1, 2, and 3. Additional code must be developed and checked against all project requirements.
+* The program can evaluate negative numbers, but does not return an error message if non-numerical entries (letters or punctuation, etc.) are entered.
+* The program does not return an error message if nothing is entered.
+* After hitting the "try again" button, the user must refresh the page manually or backspace over the previous entry to enter a new number.
 
 
 ### Where to Find This project

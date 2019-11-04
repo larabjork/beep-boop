@@ -1,11 +1,7 @@
-/* .result {
+.result {
   display: none;
-} */
-
-.clickable {
-  color: black;
-  cursor: pointer;
 }
+
 
 .fakeButton {
   padding: 4px;
@@ -13,4 +9,9 @@
   background-color: #ffcccc;
   border: 2.5px solid #990000;
   border-radius: 5px;
+}
+
+.clickable {
+  color: black;
+  cursor: pointer;
 }
