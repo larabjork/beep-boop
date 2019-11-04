@@ -57,7 +57,7 @@ There shouldn't be any special setup required. If something doesn't display corr
 ### Known Issues
 * The program can evaluate negative numbers, but does not return an error message if non-numerical entries (letters or punctuation, etc.) are entered.
 * The program does not return an error message if nothing is entered.
-* After hitting the "try again" button, the user must refresh the page manually or backspace over the previous entry to enter a new number.
+* The user must refresh the page manually to enter a new number without the previous results being retained and added onto.
 
 
 ### Where to Find This project
