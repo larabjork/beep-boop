@@ -67,4 +67,4 @@ GitHub repository: https://github.com/larabjork/beep-boop.git
 ### License
 This software is licensed under the MIT license.
 
-_Copyright (c) 2019 **  Lara Bjork **_
+Copyright (c) 2019 Lara Bjork 
